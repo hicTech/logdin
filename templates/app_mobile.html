@@ -1,0 +1,55 @@
+<style>
+    .toolbar-row{
+        height:40px;
+        background-color:rgba(0,0,0,0.2);
+        display:none;
+    }
+    
+    .footer{
+        height:25px;
+        background-color:rgba(0,0,0,0.5);
+        color:white;
+        display:none;
+    }
+</style>
+
+
+<div class="EXTENDER bg">
+     <div class="PADDER-CENTER">
+       <button class="BUTTON styled giant green">wewewe</button>
+    </div>
+</div>
+
+
+
+
+<script>
+    moduleFunctions = {
+        js_on: function(opts) {
+            var that = this;
+            var $that = this.$();
+
+            $that.find(".QRcontainer").click(function() {
+                that.goToStep1()
+            })
+
+
+
+
+        },
+        goToStep1: function() {
+            var that = this;
+            var $that = this.$();
+            var $target = $that.find(".target").html('<div data-h-modules-role="dyn_module" data-h-template-name="step_1" data-h-module-id="step_1"></div>')
+            
+            solveDynModules($that);
+            
+            
+            $that.find(".toolbar-row").show();
+            getModule("toolbar").setStep(1);
+            $that.find(".bg").removeClass("off");
+            
+        }
+
+    };
+</script>
