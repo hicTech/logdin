@@ -11,13 +11,46 @@
         color:white;
         display:none;
     }
+    
+     .toolbar .COL.done{
+        background-color: rgba(0,0,0,0.6);
+        margin: 0px 0px 0px 15px;
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+        font-size: 11px;
+        padding: 8px 12px 12px 12px;
+        box-shadow: 1px 1px rgba(255,255,255,0.2);
+    }
+    
+    .toolbar .COL{
+        background-color: rgba(0,0,0,0.1);
+        margin: 0px 0px 0px 15px;
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+        font-size: 11px;
+        padding: 8px 12px 12px 12px;
+        box-shadow: 1px 1px rgba(255,255,255,0.2);
+    }
+    
 </style>
 
 
 <div class="EXTENDER bg off">
     <div class="ROWS">
         <div class="ROW toolbar-row">
-            <div data-h-modules-role="dyn_module" data-h-template-name="toolbar" data-h-module-id="toolbar"></div>
+            <div class="EXTENDER toolbar">
+                <div class="PADDER5">
+                    <div class="COLS CENTER">
+                        <div class="COL">1</div>
+                        <div class="COL">2</div>
+                        <div class="COL">3</div>
+                        <div class="COL">4</div>
+                        <div class="COL">5</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -51,15 +84,34 @@
         goToStep1: function() {
             var that = this;
             var $that = this.$();
-            var $target = $that.find(".target").html('<div data-h-modules-role="dyn_module" data-h-template-name="step_1" data-h-module-id="step_1"></div>')
-            
+            $that.find(".target").html('<div data-h-modules-role="dyn_module" data-h-template-name="step_1" data-h-module-id="step_1"></div>');
+
+            $that.find(".toolbar-row").html();
+
+
             solveDynModules($that);
-            
-            
+
+
             $that.find(".toolbar-row").show();
-            getModule("toolbar").setStep(1);
+            that.setStep(1);
             $that.find(".bg").removeClass("off");
-            
+
+        },
+        goToStep2: function() {
+            var that = this;
+            var $that = this.$();
+            $that.find(".target").html('<div data-h-modules-role="dyn_module" data-h-template-name="step_2" data-h-module-id="step_2"></div>')
+
+            solveDynModules($that);
+            $that.find(".bg").addClass("bg2");
+            that.setStep(2);
+        },
+        setStep:function(index){
+            var that = this;
+            var $that = that.$();
+            for(var i=0;i<index;i++){
+                $that.find(".COL").eq(i).addClass("done")
+            }
         }
 
     };
