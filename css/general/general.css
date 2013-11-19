@@ -31,6 +31,13 @@ body{
     background-image: url('img/bg_0.jpg');
 }
 
+.iPhone_email_bg{
+   background-image:url(img/phone_email_bg.png);
+    background-size: 212px 228px;
+    width:212px;
+    height:228px;
+}
+
 .off{
     color: black;
     text-shadow: 1px 1px 1px rgba(255,255,255,0.45);

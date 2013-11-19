@@ -16,6 +16,7 @@
 
 <div class="EXTENDER bg">
      <div class="PADDER-CENTER">
+         
        <button class="BUTTON styled giant green">&nbsp;&nbsp;ok&nbsp;&nbsp;</button>
     </div>
 </div>
@@ -32,9 +33,12 @@
             $that.find(".BUTTON").click(function() {
                 that.sendMail();
             });
+            
         },
         sendMail:function(){
-            alert("we")
+            var user_id = getModule("common").getUserId();
+            var signin_email = getModule("common").getSigninEmail();
+            location.href="mailto:"+signin_email+"?subject=new%20user id: "+user_id+"&body=-------SEND WITHOUT MODIFY------- my registration id: "+user_id;
         }
 
     };

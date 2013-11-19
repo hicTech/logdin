@@ -44,8 +44,41 @@
     
     .step_2 .iPhone-click-hint{
         position:relative;
-        top:-195px;
-        left:245px;
+        top:-177px;
+        left:259px;
+    }
+    
+     .step_2 .iPhone-content .email_recipient{
+        position: relative;
+        font-family: "Helvetica";
+        font-size: 12px;
+        top: 50px;
+        left: 27px;
+        color: #2e93ff;
+        text-shadow: none;
+        text-align: left;
+    }
+    
+    .step_2 .iPhone-content .email_subject{
+        position: relative;
+        font-family: "Helvetica";
+        font-size: 11px;
+        top: 98px;
+        left: 52px;
+        color: black;
+        text-shadow: none;
+        text-align: left;
+    }
+    
+     .step_2 .iPhone-content .email_body{
+        position: relative;
+        font-family: "Helvetica";
+        font-size: 11px;
+        top: 113px;
+        left: 11px;
+        color: black;
+        text-shadow: none;
+        text-align: left;
     }
     
     .arrow_box {
@@ -99,7 +132,7 @@
                         </div>
 
                         <div class="ROW-FLEX" style="text-align:center">
-                            Send the e-amil appeared on your phone.
+                            Send the email appeared on your phone.
                             <br>
                             <br>
                             <span style="font-size:13px">We are waiting to reach your email...</span>
@@ -121,7 +154,11 @@
                             <div class="COL-FLEX">
                                 <div class="iPhone">
                                     <div class="iPhone-content">
-
+                                        <div class="iPhone_email_bg">
+                                            <div class="email_recipient"><span></span></div>
+                                            <div class="email_subject">user id: <span></span></div>
+                                            <div class="email_body">-------SEND WITHOUT MODIFY-------<br>my registration id: <span></span></div>
+                                        </div>
                                     </div>
                                     <div class="iPhone-click-hint arrow_box">
                                         <br>Click "send" without modify the e-mail
@@ -155,9 +192,16 @@
             // this.createScroller()                     // cerca un .wrapper e lo rende un iScroll
             var that = this;
             var $that = this.$();
+            
+            var user_id = getModule("common").getUserId();
+            var signin_email = getModule("common").getSigninEmail();
 
             var $hint = $that.find(".iPhone-click-hint");
             var $arrow_box = $that.find(".arrow_box");
+            
+            $that.find(".email_subject span").html(user_id)
+            $that.find(".email_body span").html(user_id)
+            $that.find(".email_recipient span").html(signin_email)
 
 
             $that.find(".step_status").click(function() {
