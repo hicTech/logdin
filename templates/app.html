@@ -106,6 +106,15 @@
             $that.find(".bg").addClass("bg2");
             that.setStep(2);
         },
+        goToStep3: function() {
+            var that = this;
+            var $that = this.$();
+            $that.find(".target").html('<div data-h-modules-role="dyn_module" data-h-template-name="step_3" data-h-module-id="step_3"></div>')
+
+            solveDynModules($that);
+            $that.find(".bg").removeClass("bg2");
+            that.setStep(3);
+        },
         setStep:function(index){
             var that = this;
             var $that = that.$();

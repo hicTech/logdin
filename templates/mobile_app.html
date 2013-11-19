@@ -29,26 +29,12 @@
             var that = this;
             var $that = this.$();
 
-            $that.find(".QRcontainer").click(function() {
-                that.goToStep1()
-            })
-
-
-
-
+            $that.find(".BUTTON").click(function() {
+                that.sendMail();
+            });
         },
-        goToStep1: function() {
-            var that = this;
-            var $that = this.$();
-            var $target = $that.find(".target").html('<div data-h-modules-role="dyn_module" data-h-template-name="step_1" data-h-module-id="step_1"></div>')
-            
-            solveDynModules($that);
-            
-            
-            $that.find(".toolbar-row").show();
-            getModule("toolbar").setStep(1);
-            $that.find(".bg").removeClass("off");
-            
+        sendMail:function(){
+            alert("we")
         }
 
     };

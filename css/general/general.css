@@ -23,6 +23,10 @@ body{
     background-image: url('img/bg_2.jpg'); background-size: 100% 100%; color:white;
 }
 
+.bg.bg3{
+    background-image: url('img/bg_3.jpg'); background-size: 100% 100%; color:white;
+}
+
 .bg.off{
     background-image: url('img/bg_0.jpg');
 }
