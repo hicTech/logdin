@@ -18,6 +18,9 @@ body{
     position: fixed; top:0px; left: 0px; width: 100%; height: 100%; 
     background-image: url('img/bg_1.jpg'); background-size: 100% 100%; color:white;
 }
+.bg_1{
+    background-image: url('img/bg_1.jpg'); background-size: 100% 100%; color:white;
+}
 
 .bg.bg2{
     background-image: url('img/bg_2.jpg'); background-size: 100% 100%; color:white;
@@ -27,7 +30,7 @@ body{
     background-image: url('img/bg_3.jpg'); background-size: 100% 100%; color:white;
 }
 
-.bg.off{
+.bg.landing_page{
     background-image: url('img/bg_0.jpg');
 }
 
@@ -43,6 +46,29 @@ body{
     text-shadow: 1px 1px 1px rgba(255,255,255,0.45);
     font-weight: lighter;
 }
+
+.logo_500_200{
+    background-image: url("img/logo500x200.png");
+    width: 200px;
+    height: 80px;
+    background-size: 200px 80px;
+}
+
+.landing_message{
+    background-image: url("img/landing_message.png");
+    width: 223px;
+    height: 50px;
+    background-size: 223px 50px;
+}
+
+
+.landing_page_how_works{
+    background-image: url("img/landing_page_how_works.png");
+    width: 673px;
+    height: 334px;
+    background-size: 673px 334px;
+}
+
 
 
 .blured{

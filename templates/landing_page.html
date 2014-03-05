@@ -1,63 +1,33 @@
 <style>
-    .toolbar-row{
-        height:40px;
-        background-color:rgba(0,0,0,0.2);
-        display:none;
-    }
-    
-    .footer{
-        height:25px;
-        background-color:rgba(0,0,0,0.5);
-        color:white;
-        display:none;
-    }
-    
-     .toolbar .COL.done{
-        background-color: rgba(0,0,0,0.6);
-        margin: 0px 0px 0px 15px;
-        border-radius: 15px;
-        color: white;
-        text-align: center;
-        font-size: 11px;
-        padding: 8px 12px 12px 12px;
-        box-shadow: 1px 1px rgba(255,255,255,0.2);
-    }
-    
-    .toolbar .COL{
-        background-color: rgba(0,0,0,0.1);
-        margin: 0px 0px 0px 15px;
-        border-radius: 15px;
-        color: white;
-        text-align: center;
-        font-size: 11px;
-        padding: 8px 12px 12px 12px;
-        box-shadow: 1px 1px rgba(255,255,255,0.2);
-    }
+.landing_page_container{
+    box-shadow: -16px 0px 30px rgba(0,0,0,0.5);
+}
+
+
     
 </style>
 
 
-<div class="EXTENDER bg landing_page">
+<div class="EXTENDER">
     <div class="ROWS">
-        <div class="ROW toolbar-row">
-            <div class="EXTENDER toolbar">
-                <div class="PADDER5">
-                    <div class="COLS CENTER">
-                        <div class="COL">1</div>
-                        <div class="COL">2</div>
-                        <div class="COL">3</div>
-                        <div class="COL">4</div>
-                        <div class="COL">5</div>
-                    </div>
+        <div class="ROW COLS CENTER" style="height:100px">
+            <div class="COL logo_500_200" style="margin-top: 10px"></div>
+        </div>
+
+        <div class="ROW-FLEX bg_1 landing_page_container">
+            <div class="EXTENDER">
+                <div class="landing_message" style="margin: 30px auto"></div>
+                <div class="landing_page_how_works" style="margin: 50px auto;"></div>
+                <div style="margin: 0px auto; width:200px">
+                    <button class="BUTTON styled giant green" style="margin: 0px auto; width:200px">&nbsp;Try now&nbsp;</button>
                 </div>
+
             </div>
         </div>
 
-        <div class="ROW-FLEX">
-            <div class="EXTENDER">
-                <div data-h-modules-role="dyn_module" data-h-template-name="landing_page" data-h-module-id="landing_page"></div>
-            </div>
-        </div>
+        <div class="ROW" style="height: 50px; background-color: rgba(0,0,0,0.5); color:rgba(255,255,255,0.8); font-size:13px; text-align: center; padding-top:5px ">Da oggi con <b>logdIN</b> potrai usare il tuo telefono come chiave universale per tutte le tue log in.<br>Non dovrai più ricordare milioni di password bla bla</div>
+
+
 
         <!--
         <div class="ROW-FLEX">
